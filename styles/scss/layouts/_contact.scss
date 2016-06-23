@@ -1,0 +1,142 @@
+#contact {
+	height: 100vh;
+	padding-top: 50px;
+	position: relative;
+	h1{
+		@include ipad-landscape {
+			margin-top: 6%;
+		}
+		@include ipad-portrait {
+			margin-top: 2%;
+		}
+		@include iphone-portrait {
+			margin-top: 1%;
+		}
+	}
+	.contact-address{
+		@include ipad-portrait {
+			width: 50%;
+			float: left;
+		}
+		ul{
+			padding: 0;
+			margin: .5vw 0 0 0;
+			li{
+				@include responsive-font(1.5vw, 15px);
+				color: white;
+				@include iphone6-plus-landscape {
+					line-height: 18px;
+				}
+				@include iphone6-landscape {
+					font-size: 12px;
+				}
+				@include iphone5-landscape {
+					font-size: 12px;
+				}
+				a{
+					color: white;
+					&:hover{
+						text-decoration: none;
+						color: $brick-red;
+					}
+				}
+			}
+		}
+	}
+	.contact-files{
+		@include ipad-portrait {
+			width: 50%;
+			float: left;
+		}
+	}
+	.contact-files, .back-to-residents{
+		ul{
+			padding: 0;
+			margin: 4vw 0 0 0;
+			@include ipad-portrait {
+				margin: 0 0 2vw;
+			}
+			@include iphone6-plus-landscape {
+				margin: 1vw 0;
+			}
+			@include iphone6-landscape {
+				margin: 2vw 0;
+			}
+			@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
+				margin: 1.2vw 0 0 0;
+			}
+			li{
+				@include responsive-font(1vw, 12px);
+				color: white;
+				i{
+					@include responsive-font(2.5vw, 21px);
+					&:hover{
+						color: $brick-red;
+					}
+				}
+				@include iphone6-landscape {
+					font-size: 10px !important;
+				}
+			}
+			a{
+				@include responsive-font(2.5vw, 21px);
+				color: white;
+				&:hover{
+					color: $brick-red;
+				}
+			}
+		}
+		ul.back-residents{
+			padding-top: 3vw;
+			@include iphone6-plus-landscape {
+				padding-top: 3vw;
+			}
+			@include iphone6-landscape {
+				padding-top: 0;
+			}
+			@include iphone5-landscape {
+				display: none;
+			}
+		}
+	}
+	.back-to-residents{
+		@include ipad-portrait {
+			float: right;
+		    width: 50%;
+		}
+	}
+	.contact-container{
+		padding: 0;
+		background-image: url('../../img/contact-main.jpg');
+		background-size: cover;
+		background-position-x: 5%;
+	  	background-repeat: no-repeat;
+		margin-top: -50px;
+		height: 100vh;
+		@include ipad-landscape {
+			background-position-x: 25%;
+		}
+		@include ipad-portrait {
+			height: 55vh;
+			position: absolute;
+			bottom: 0;
+		}
+		@include iphone6-plus-landscape {
+			background-size: 180%;
+			background-position-y: -10%;
+		}
+		@include iphone-portrait {
+			background-position-x: 22%;
+		}
+	}
+	.col-xs-4{
+		@include iphone-portrait {
+			width: 50%;
+		}
+	}
+	.col-xs-8{
+		@include iphone-portrait {
+			width: 50%;
+		}
+	}
+}

@@ -1,0 +1,259 @@
+#residents {
+	h1.residents-title{
+		margin: 4% 0 0 1%;
+		z-index: 1;
+		@include ipad-landscape{
+			margin-top: 8%;
+		}
+		@include mobile{
+			margin-top: 2%;
+		}
+		@include iphone5-landscape{
+			margin-top: 2px;
+		}
+	}
+	padding-top: 50px;
+	height: 100vh;
+	background-color: white;
+	.faq-box-container {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		@include mobile{
+			top: 5%;
+			transform: initial;
+		}
+		@include iphone{
+			top: 0;
+		}
+	}
+
+	.faq-box {
+		background-color: black;
+	    margin: 2.5vh 2.5% 0;
+	    height: 16vh;
+	    width: 45%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		@include ipad-landscape{
+			margin-top: 2.5vh;
+			margin-bottom: 2.5vh;
+		}
+		@include mobile{
+			float: left;
+		    margin: 2.5vh 1.5% 0;
+		    width: 47%;
+		}
+		@include iphone6-plus-landscape{
+			margin: 1% 1%;
+			width: 48%;
+		}
+		@include iphone-portrait{
+			height: 30vw;
+			margin: 1.5vh 1.5% 0;
+		}
+		&:hover, &:active{
+			background-color: $brick-red;
+			text-decoration: none;
+		}
+		a{
+			text-decoration: none;
+			&:hover, &:active{
+				text-decoration: none;
+			}
+		}
+		h1 {
+			color: white;
+			font-size: 32px;
+			text-align: center;
+			padding-bottom: 10px;
+			@include ipad-landscape{
+				font-size: 25px;
+			}
+			@include iphone{
+				font-size: 20px;
+			}
+		}
+		i.link-out{
+			@include responsive-font(1.85vw, 18px);
+			color: white;
+			position: absolute;
+			right: 5px;
+			top: 5px;
+		}
+	}
+	.modal {
+		top: 50%;
+		transform: translateY(-50%);
+		@include iphone{
+			height: 75%;
+		}
+		h1{
+			color: $transparent-black;
+			padding-bottom: 10px;
+		}
+		.modal-body {
+			/* IMPORTANT!! */
+			padding: 30px;
+			height: 100%;
+			background-color: rgb(255, 245, 236);
+			border: 10px solid black;
+			box-sizing: border-box;
+			top: 5%;
+		}
+		.modal-logo{
+			width: 30%;
+			padding-bottom: 2vh;
+		}
+		.modal-single-logo{
+			margin: 0 auto;
+			display: block;
+			width: 55%;
+			padding-right: 2vw;
+			padding-top: 15px;
+		}
+		.modal-double-logo{
+			width: 100%;
+			padding-bottom: 2vh;
+		}
+		.modal-uber-logo{
+			float: left;
+			width: 45%;
+			position: relative;
+			top: 50%;
+			transform: translateY(60%);
+			margin-left: 2vw;
+			@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
+				display: none;
+			}
+			@include ipad-landscape{
+				margin-left: 5vw;
+			}
+			@include ipad-portrait{
+				margin-left: 6.5vw;
+			}
+			@include iphone{
+				margin-left: 7vw;
+			}
+		}
+		.modal-uber-logo-ie {
+			display: none;
+			@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
+				display: block;
+				float: left;
+				width: 45%;
+				position: relative;
+				top: 50%;
+				transform: translateY(60%);
+				margin-left: 2vw;
+			}
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+		.modal-lyft-logo{
+			width: 30%;
+			margin-left: 4vw;
+			@include iphone6-plus-landscape{
+				margin-left: 6vw;
+			}
+		}
+		.modal-gg-logo{
+			float: left;
+			width: 22%;
+			margin-top: 1vw;
+			margin-left: 4.5vw;
+			@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
+				margin-top: 0;
+			}
+			@include ipad-landscape{
+				margin-left: 7vw;
+			}
+			@include ipad-portrait{
+				margin-left: 8.5vw;
+				margin-top: 2vw;
+			}
+			@include iphone6-plus-landscape{
+				margin-left: 11vw;
+			}
+			@include iphone6-landscape{
+				margin-left: 12vw;
+			}
+			@include iphone-portrait{
+				margin-left: 10vw;
+			}
+		}
+		.modal-cp-logo{
+			width: 45%;
+			margin-left: 4vw;
+			position: relative;
+			top: 50%;
+			transform: translateY(35%);
+			padding-bottom: 7vw;
+			@include ipad-landscape{
+				padding-bottom: 11vw;
+			}
+			@include ipad-portrait{
+				padding-bottom: 14vw;
+			}
+			@include iphone{
+				padding-bottom: 15.5vw;
+				margin-left: 6vw;
+			}
+		}
+		.modal-postmates-logo{
+			float: left;
+			width: 22%;
+			margin-top: 1vw;
+			margin-left: 4.5vw;
+			@include ipad-landscape{
+				margin-left: 7vw;
+			}
+			@include ipad-portrait{
+				margin-left: 10vw;
+			}
+			@include iphone{
+				margin-left: 12.5vw;
+			}
+		}
+		.modal-ue-logo{
+			width: 45%;
+			margin-left: 4vw;
+			position: relative;
+			top: 50%;
+			transform: translateY(35%);
+			padding-bottom: 7vw;
+			@include ipad-portrait{
+				padding-bottom: 8vw;
+			}
+			@include iphone6-plus-landscape{
+				padding-bottom: 11vw;
+				margin-left: 6vw;
+			}
+			@include iphone6-landscape{
+				padding-bottom: 13vw;
+			}
+		}
+		button.close{
+			width: 50px;
+			height: 50px;
+			opacity: 1;
+			position: absolute;
+			top: -20px;
+			right: -20px;
+			background-color: black;
+			&:hover{
+				opacity: 1;
+			}
+			span{
+			    font-size: 48px;
+			    line-height: 13px;
+				color: white;
+			}
+		}
+	}
+}
+

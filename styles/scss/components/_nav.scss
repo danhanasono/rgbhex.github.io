@@ -1,0 +1,113 @@
+.navbar-inverse {
+	background-color: black;
+	.navbar-nav {
+		.dropdown-menu{
+		}
+		li{
+			a{
+				color: white;
+				padding: 0 25px 0 25px;
+				&:hover{
+					
+				}
+				&:visited, &:active{
+					color: white;
+				}
+				@include ipad-portrait{
+					padding: 0 15px;
+				}
+			}
+		}
+		ul.dropdown{
+			margin-top: 10px;
+		}
+		li.dropdown{
+			width: 160px;
+		}
+		.active{
+			a{
+			}
+		}
+	}
+	.navbar-non-collapsing{
+		position: relative;
+		ul{ 
+			position: absolute;
+			top: 20px;
+			left: 50%;
+			margin-right: -50%;
+			transform: translate(-50%, -50%);
+			@include iphone {
+				top: 0;
+				left: initial;
+				margin-right: 0;
+				transform: initial;
+				right: 2%;
+			}
+		}
+		@include ipad-portrait{
+			margin-left: 4vw;
+		}
+	}
+}
+
+.navbar{
+	border-radius: 0;
+	margin: 0 0 -50px 0;
+}
+
+.navbar-header {
+	.navbar-toggle{
+		border-radius: 0;
+	}
+	a{
+	    padding: 3px 0px 0 5px;
+	    width: 11.2vw;
+		height: auto;
+		position: absolute;
+		display: block;
+		z-index: 10;
+		@include large-screen{
+			width: 8.7vw;
+		}
+		@include ipad-landscape{
+			width: 15.2vw;
+		}
+		@include ipad-portrait{
+			width: 21vw;
+		}
+		@include iphone{
+			width: 21vw;
+		}
+		@include iphone5-landscape{
+			width: 27vw;
+		}
+		@include iphone-portrait{
+			width: 40vw;
+		}
+	}
+}
+
+.navbar-scrolled {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    border-top: 0;
+}
+
+.nav.navbar-nav {
+	text-align: center;
+}
+
+// IE Specific Styles
+@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
+	.navbar{
+		.navbar-header{
+			a{
+				height: 46px;
+			}
+		}
+	}
+}

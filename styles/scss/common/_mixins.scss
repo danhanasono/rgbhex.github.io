@@ -1,0 +1,85 @@
+@mixin responsive-font($responsive, $min, $max: false, $fallback: false) {
+  $responsive-unitless: $responsive / ($responsive - $responsive + 1);
+  $dimension: if(unit($responsive) == 'vh', 'height', 'width');
+  $min-breakpoint: $min / $responsive-unitless * 100;
+
+  @media (max-#{$dimension}: #{$min-breakpoint}) {
+    font-size: $min;
+  }
+  @if $max {
+    $max-breakpoint: $max / $responsive-unitless * 100;
+    @media (min-#{$dimension}: #{$max-breakpoint}) {
+      font-size: $max;
+    }
+  }
+  @if $fallback {
+    font-size: $fallback;
+  }
+  font-size: $responsive;
+}
+
+@mixin large-screen {
+  @media (min-width: #{$desktop-1600px + 1px}) and (max-width: #{$desktop-1920px}) {
+    @content;
+  }
+}
+@mixin ipad {
+  @media (min-width: #{$iphone6-plus-landscape + 1px}) and (max-width: #{$ipad-landscape}) {
+    @content;
+  }
+}
+@mixin ipad-landscape {
+  @media (min-width: #{$ipad-vertical + 1px}) and (max-width: #{$ipad-landscape}) {
+    @content;
+  }
+}
+@mixin ipad-portrait {
+  @media (min-width: #{$iphone6-plus-landscape + 1px}) and (max-width: #{$ipad-vertical}) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (min-width: #{0px}) and (max-width: #{$ipad-vertical}) {
+    @content;
+  }
+}
+@mixin iphone {
+  @media (min-width: #{0px}) and (max-width: #{$iphone6-plus-landscape}) {
+    @content;
+  }
+}
+@mixin iphone6-plus-landscape {
+  @media (min-width: #{$iphone6-landscape + 1px}) and (max-width: #{$iphone6-plus-landscape}) {
+    @content;
+  }
+}
+@mixin iphone6-landscape {
+  @media (min-width: #{$iphone5-landscape + 1px}) and (max-width: #{$iphone6-landscape}) {
+    @content;
+  }
+}
+@mixin iphone5-landscape {
+  @media (min-width: #{$iphone6-plus-vertical + 1px}) and (max-width: #{$iphone5-landscape}) {
+    @content;
+  }
+}
+@mixin iphone-portrait {
+  @media (min-width: #{0px}) and (max-width: #{$iphone6-plus-vertical}) {
+    @content;
+  }
+}
+@mixin iphone6-plus-portrait {
+  @media (min-width: #{$iphone6-vertical + 1px}) and (max-width: #{$iphone6-plus-vertical}) {
+    @content;
+  }
+}
+@mixin iphone6-portrait {
+  @media (min-width: #{$iphone5-vertical + 1px}) and (max-width: #{$iphone6-vertical}) {
+    @content;
+  }
+}
+@mixin iphone5-portrait {
+  @media (min-width: #{0px}) and (max-width: #{$iphone5-vertical}) {
+    @content;
+  }
+}
