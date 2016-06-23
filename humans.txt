@@ -1,0 +1,26 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Dan Hanasono -- Designer | Front End Dev -- s0L0olo0L0
+
+# THANKS
+
+    William H Carter III - for cutting your teeth at Looking and giving me a gulp kit that is real neat.
+    Clay Cooper - for letting me cut my teeth at Looking and laying a path
+    John Clark, Marianne Thompson and Richard Kobayashi - for providing a roof over my head when I had babies
+    Andre Sochinski, Nicole Bella, Paul Mendoza, Benny Gee, Grace Hutchison, Sara Nakamura, Matt Johnson, Hsin Chen, Hanlu Cao, Rachel Macek, Ali Keenan, Drea Caruso, Jim Bogenrief - for tilin' straight wilin'
+    Marc Mertens - for boosting my confidence in concept and presentation
+    Mitch Gohman - for boosting my coding skills
+    Wojtek Tilbury - for early web projects
+    Eric McDermott - for early project management projects
+    Shalea Oretzky - last and not least, my kitty
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    jQuery, Modernizr
+    SCSS
+    Bootstrap
+    Gulp

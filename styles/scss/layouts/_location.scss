@@ -1,0 +1,76 @@
+#location{
+	// height: 100vh;
+	// background-image: url("../../img/location-aerial.jpg");
+	// background-size: contain;
+	// background-repeat: no-repeat;
+	// background-position-x: 50%;
+	// background-position-y: 50%;
+	// padding-top: 44px;
+	h1{
+		position: absolute;
+		margin: 4% 0 0 1%;
+		color: $transparent-black;
+		@include ipad-landscape{
+			margin-top: 6%;
+		}
+		@include ipad-portrait{
+			margin-top: 8%;
+		}
+		@include iphone{
+			margin-top: 8%;
+		}
+		@include iphone5-landscape{
+			margin-top: 10%;
+		}
+		@include iphone-portrait{
+			margin-top: 12%;
+			font-size: 18px;
+		}
+		@include iphone6-portrait{
+			margin-top: 12%;
+			font-size: 18px;
+		}
+		@include iphone5-portrait{
+			margin-top: 18%;
+			font-size: 14px;
+		}
+	}
+	img{
+		width: 100%;
+		height: auto;
+		@include ipad{
+			margin-top: 49px;
+		}
+		@include iphone{
+			margin-top: 28px;
+		}
+	}
+	.location-download{
+		position: relative;
+		.location-map{
+			position: absolute;
+			bottom: 5vw;
+			ul{
+				padding: 0;
+				li{
+					@include responsive-font(1vw, 14px);
+					color: white;
+					i{
+						@include responsive-font(2.5vw, 21px);
+						&:hover{
+							color: $brick-red;
+						}
+					}	
+				}
+				a{
+					@include responsive-font(2.5vw, 21px);
+					color: white;
+					&:hover{
+						color: $brick-red;
+					}
+				}
+			}
+		}	
+	}
+	
+}

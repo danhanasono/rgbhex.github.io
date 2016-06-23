@@ -1,0 +1,130 @@
+#team {
+	padding-top: 50px;
+	height: 100vh;
+	background-color: $transparent-black;
+	h1{
+		@include ipad-landscape{
+			margin-top: 6%;
+		}
+		@include ipad-portrait{
+			margin-top: 3%;
+		}
+		@include iphone{
+			margin-top: 2px;
+		}
+	}
+	.team-box-container{
+		height: 100vh;
+		position: relative;
+		top: 50%;
+		transform: translateY(-43%);
+		@include ipad-portrait{
+			top: 1%;
+			transform: initial;
+		}
+		.team-box{
+			width: 45%;
+			background-color: $off-white;
+			border: 13px solid black;
+			margin: 5vh 2.5% 0;
+			height: 20vw;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			img {
+				width: auto;
+				height: 81%;
+			}
+			@include ipad-landscape{
+				height: 26vw;
+			}
+			@include ipad-portrait {
+				width: 95%;
+				height: 27vw;
+				margin-top: 1vh;
+			}
+			@include iphone{
+				float: left;
+				margin: 1.5vh 1.25%;
+				width: 47.5%
+			}
+			@include iphone-portrait{
+				width: 97%;
+				height: 32vw;
+				margin: 0.5vh 1.25%;
+			}
+			@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
+				height: 18vw;
+			}
+			&:hover{
+				background-color: white;
+			}
+				h1{
+					color: black;
+					font-size: 32px;
+					text-align: center;
+				}
+				#worthe-logo{
+					width: 23vw;
+					@include ipad-portrait{
+						width: 45vw;
+					}
+					@include iphone6-plus-landscape{
+						width: 30vw;
+					}
+					@include iphone6-landscape{
+						width: 32vw;
+					}
+					@include iphone5-landscape{
+						width: 34vw;
+					}
+					@include iphone-portrait{
+						width: 50vw;
+					}
+				}
+				#odg-logo{
+					width: 14vw;
+					@include ipad-portrait {
+						width: 17vw;
+					}
+					@include iphone-portrait{
+						width: 24vw;
+					}
+					@include iphone5-portrait{
+						width: 20vw;
+					}
+				}
+				#environmental-logo{
+					width: 20vw;
+					@include ipad-portrait{
+						width: 36vw;
+					}
+					@include iphone6-plus-landscape{
+						width: 25vw;
+					}
+					@include iphone5-landscape{
+						width: 27vw;
+					}
+					@include iphone-portrait{
+						width: 42vw;
+					}
+				}	
+				#looking-logo{
+					width: 18vw;
+					@include ipad-portrait{
+						width: 33vw;
+					}
+					@include iphone6-plus-landscape{
+						width: 20vw;
+					}
+					@include iphone5-landscape{
+						width: 22vw;
+					}
+					@include iphone-portrait{
+						width: 34vw;
+					}
+				}
+		}	
+	}
+}

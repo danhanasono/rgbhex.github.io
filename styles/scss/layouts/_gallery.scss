@@ -1,0 +1,105 @@
+#gallery {
+	// padding-top: 37px;
+	h1{
+		position: absolute;
+		margin: 4% 0 0 1%;
+		z-index: 1;
+		@include ipad-landscape{
+			margin-top: 6%;
+		}
+	}
+	.carousel-inner {
+		height: 100vh;
+		.carousel-1 {
+			background: url(/img/gallery-main-room-sofa.jpg);
+			background-size: cover;
+			background-position: 50%;	
+			height: 100vh;
+		}
+		.carousel-2 {
+			background: url(/img/gallery-main-room-bed.jpg);
+			background-size: cover;
+			background-position: 50%;
+			height: 100vh;
+		}
+		.carousel-3 {
+			background: url(/img/gallery-main-room-to-kitchen.jpg);
+			background-size: cover;
+			background-position: 50%;
+			height: 100vh;
+		}
+		.carousel-4 {
+			background: url(/img/gallery-kitchen.jpg);
+			background-size: cover;
+			background-position: 50%;
+			height: 100vh;
+		}
+		.carousel-5 {
+			background: url(/img/gallery-kitchen-table.jpg);
+			background-size: cover;
+			background-position: 50%;
+			height: 100vh;
+		}
+		.carousel-6 {
+			background: url(/img/gallery-closet-storage.jpg);
+			background-size: cover;
+			background-position: 50%;
+			height: 100vh;
+		}
+		.caption{
+			display: block;
+			position: absolute;
+			width: 35%;
+			height: 5vw;
+			bottom: 0;
+			left: 0;
+			background-color: $more-transparent-black;
+			color: white;
+			padding: 10px;
+			@include responsive-font(2.2vw, 21px);
+			z-index: 10;
+			@include ipad-portrait{
+				height: 10vw;
+				width: 100%;
+				line-height: 55px;
+			}
+			@include iphone {
+				height: 10vw;
+				width: 100%;
+				line-height: 30px;
+			}
+			@include iphone-portrait{
+				height: 15vw;
+				line-height: 18px;
+			}
+		}
+	}
+	.carousel-image {
+		width: 100%;
+		height: auto;
+		z-index: 10;
+	}
+	.previous-arrow, .next-arrow{
+		position: absolute;
+		top: 50%;
+		@include responsive-font(3vw, 36px);
+	 	@include iphone-portrait{
+			left: 31%;
+		}
+	}
+	.next-arrow{
+		@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active){
+			right: 0%;
+		}
+	}
+	.carousel-indicators{
+		@include iphone {
+		    width: 98%;
+			left: 0;
+			margin-left: 0;
+			padding-left: 0;
+			text-align: right;
+		}
+	}
+}
+
